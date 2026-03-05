@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login button not working",
+    "description": "Users cannot click the login button on the homepage.",
+    "customer": "Acme Corp",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-05-01T09:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Missing invoice email",
+    "description": "Customer not receiving invoice emails after payment.",
+    "customer": "Globex Inc",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2024-05-02T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Dashboard crash on load",
+    "description": "The admin dashboard crashes immediately on load for some users.",
+    "customer": "Soylent Corp",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-05-03T12:30:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Feature request: dark mode",
+    "description": "Customer requests a dark mode option for the app UI.",
+    "customer": "Initech",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2024-05-04T14:45:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Unable to reset password",
+    "description": "Password reset link leads to a 404 error.",
+    "customer": "Umbrella Corp",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-05-05T09:00:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Mobile app crash",
+    "description": "App crashes on Android 11 when opening profile page.",
+    "customer": "Hooli",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2024-05-06T11:20:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Incorrect billing total",
+    "description": "Invoices show incorrect totals for international customers.",
+    "customer": "Vandelay Industries",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-05-07T13:10:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Search not returning results",
+    "description": "Search function fails to return any results for known keywords.",
+    "customer": "Stark Industries",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2024-05-08T15:05:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Broken link in FAQ",
+    "description": "Link to refund policy in FAQ is broken.",
+    "customer": "Wayne Enterprises",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2024-05-09T10:30:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Slow loading time",
+    "description": "Website loading takes too long on mobile devices.",
+    "customer": "Duff Beer",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-05-10T08:00:00Z"
+  },
+  {
+    "id": 11,
+    "title": "App notifications not working",
+    "description": "Users do not receive push notifications.",
+    "customer": "Cyberdyne Systems",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2024-05-11T09:15:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Language settings reset",
+    "description": "User language preference resets to default after logout.",
+    "customer": "Oceanic Airlines",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-05-12T12:45:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Email validation issue",
+    "description": "Form accepts invalid email formats.",
+    "customer": "Pied Piper",
+    "priority": "High",
+    "status": "Closed",
+    "createdAt": "2024-05-13T16:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Error 500 on submit",
+    "description": "Form submission causes a server error.",
+    "customer": "BiffCo Enterprises",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-05-14T11:35:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Report export fails",
+    "description": "PDF export of reports fails with unknown error.",
+    "customer": "Tyrell Corporation",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2024-05-15T14:25:00Z"
+  }
+]
