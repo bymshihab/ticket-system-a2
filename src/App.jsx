@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import CustomerTickets from "./components/CustomerTickets/CustomerTickets";
 import TaskStatus from "./components/TaskStatus/TaskStatus";
 import ResolvedTask from "./components/ResolvedTask/ResolvedTask";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
