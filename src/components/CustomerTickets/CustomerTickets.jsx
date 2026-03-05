@@ -13,6 +13,7 @@ const CustomerTickets = () => {
           throw new Error('Failed to fetch tickets');
         }
         const data = await response.json();
+        console.log(data);
         setTickets(data);
       } catch (err) {
         setError(err.message);
@@ -48,6 +49,17 @@ const CustomerTickets = () => {
       default:
         return 'text-gray-600 bg-gray-50';
     }
+  };
+
+  const formatDate = (dateString) => {
+    if (!dateString) return '';
+    
+    const date = new Date(dateString);
+    const month = date.getMonth() + 1; // getMonth() returns 0-11
+    const day = date.getDate();
+    const year = date.getFullYear().toString(); 
+    
+    return `${month}/${day}/${year}`;
   };
 
   if (loading) {
@@ -95,7 +107,7 @@ const CustomerTickets = () => {
             
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <span className="text-sm font-medium text-gray-700">{ticket.id}</span>
+                <span className="text-sm font-medium text-gray-700">#{ticket.id}</span>
                 <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(ticket.priority)}`}>
                   {ticket.priority}
                 </span>
@@ -106,7 +118,7 @@ const CustomerTickets = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                {ticket.date}
+                {formatDate(ticket.createdAt || ticket.date)}
               </div>
             </div>
           </div>
