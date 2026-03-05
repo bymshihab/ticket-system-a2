@@ -4,7 +4,7 @@ const ResolvedCard = ({ count = 0 }) => {
   return (
     <div
       className="relative w-full h-[250px] rounded-xl overflow-hidden 
-                bg-gradient-to-br from-[#6D28D9] via-[#7C3AED] to-[#2563EB] 
+                bg-gradient-to-br from-[#097509] via-[#17ac37] to-[#25eb7e] 
                 flex flex-col items-center justify-center text-white"
     >
       {/* Top Right Vector */}
