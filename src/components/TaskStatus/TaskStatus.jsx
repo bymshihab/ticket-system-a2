@@ -15,7 +15,7 @@ const TaskStatus = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="">
       <h2 className="text-xl font-semibold mb-6 text-gray-800">Task Status</h2>
       
       <div className="space-y-4">
@@ -26,10 +26,7 @@ const TaskStatus = () => {
             </div>
             
             <div className="flex items-center justify-between">
-              <span className="text-xs px-3 py-1 rounded bg-red-50 text-red-600">
-                {task.priority}
-              </span>
-              <div className="px-4 py-2 bg-green-500 text-white text-sm rounded-md">
+              <div className="btn px-4 py-2 bg-green-500 text-white text-sm rounded-md w-full text-center">
                 {task.status}
               </div>
             </div>

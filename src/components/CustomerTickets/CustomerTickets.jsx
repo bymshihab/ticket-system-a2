@@ -87,7 +87,7 @@ const CustomerTickets = () => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="">
       <h2 className="text-xl font-semibold mb-6 text-gray-800">
         Customer Tickets
       </h2>
