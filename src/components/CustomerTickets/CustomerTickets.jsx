@@ -1,29 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const CustomerTickets = () => {
-  const [tickets, setTickets] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchTickets = async () => {
-      try {
-        const response = await fetch("/data/tickets.json");
-        if (!response.ok) {
-          throw new Error("Failed to fetch tickets");
-        }
-        const data = await response.json();
-        console.log(data);
-        setTickets(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTickets();
-  }, []);
+const CustomerTickets = ({ tickets = [], onTicketClick }) => {
+  // Remove the useEffect as tickets are now passed as props
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -58,36 +36,8 @@ const CustomerTickets = () => {
     return `${month}/${day}/${year}`;
   };
 
-  if (loading) {
-    return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-semibold mb-6 text-gray-800">
-          Customer Tickets
-        </h2>
-        <div className="flex items-center justify-center py-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-3 text-gray-600">Loading tickets...</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-semibold mb-6 text-gray-800">
-          Customer Tickets
-        </h2>
-        <div className="text-center py-8">
-          <div className="text-red-500 mb-2">Error loading tickets</div>
-          <div className="text-gray-500 text-sm">{error}</div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <h2 className="text-xl font-semibold mb-6 text-gray-800">
         Customer Tickets
       </h2>
@@ -96,7 +46,8 @@ const CustomerTickets = () => {
         {tickets.map((ticket) => (
           <div
             key={ticket.id}
-            className="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow"
+            className="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer hover:border-blue-300"
+            onClick={() => onTicketClick && onTicketClick(ticket)}
           >
             <div className="flex items-start justify-between mb-3">
               <h3 className="font-medium text-gray-900">{ticket.title}</h3>

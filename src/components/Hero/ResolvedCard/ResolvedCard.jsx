@@ -1,6 +1,6 @@
 import React from "react";
 
-const ResolvedCard = () => {
+const ResolvedCard = ({ count = 0 }) => {
   return (
     <div
       className="relative w-full h-[250px] rounded-xl overflow-hidden 
@@ -24,7 +24,7 @@ const ResolvedCard = () => {
       {/* Content */}
       <div className="relative z-10 text-center">
         <h2 className="text-2xl font-medium opacity-90 mb-3">Resolved</h2>
-        <div className="text-7xl font-semibold">0</div>
+        <div className="text-7xl font-semibold">{count}</div>
       </div>
     </div>
   );
