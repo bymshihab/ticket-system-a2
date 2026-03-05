@@ -1,16 +1,89 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## QnA
+---
+### 1. What is JSX, and why is it used?
 
-Currently, two official plugins are available:
+**JSX** lets us write **HTML inside JavaScript** when using React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Example:
 
-## React Compiler
+```jsx
+<h1>Hello</h1>
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Why we use it:**
 
-## Expanding the ESLint configuration
+* It looks like HTML, so it is **easy to read**
+* It helps us **build UI faster**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 2. What is the difference between State and Props?
+
+**State**
+
+* Data that **belongs to the component**
+* It **can change**
+
+**Props**
+
+* Data sent from **parent to child component**
+* The child **cannot change it**
+
+Example idea:
+
+* Parent gives props like a **gift**
+* Child can **use it but not change it**
+
+---
+
+### 3. What is the useState hook, and how does it work?
+
+`useState` lets a component **remember data**.
+
+Example:
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+* `count` → the value
+* `setCount` → function to change the value
+
+When the value changes, **React updates the screen automatically**.
+
+---
+
+### 4. How can you share state between components?
+
+Ways to share data:
+
+1. **Lifting State Up**
+   Move the state to the **parent component** and send it to children with props.
+
+2. **Context API**
+   Share data with many components without passing props step by step.
+
+3. Libraries like **Redux** help manage big app data.
+
+---
+
+### 5. How is event handling done in React?
+
+React handles events like **button clicks** with functions.
+
+Example:
+
+```jsx
+<button onClick={handleClick}>Click</button>
+```
+
+```jsx
+function handleClick() {
+  console.log("Button clicked");
+}
+```
+
+When the button is clicked, the function runs.
+
+
